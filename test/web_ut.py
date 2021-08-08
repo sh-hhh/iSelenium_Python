@@ -15,11 +15,10 @@ class ISelenium(unittest.TestCase):
     def get_config(self):
         config = configparser.ConfigParser()
         # config.read(os.path.join(os.environ['HOME'], 'iselenium.ini'))  HOME  是linux
-        # config.read(os.path.join(os.environ['HOMEPATH'], 'iselenium.ini'))
+        config.read(os.path.join(os.environ['HOMEPATH'], 'iselenium.ini'))
         # HOMEPATH 是windows C:\Users\1
-        dirpath = os.path.dirname(os.path.abspath("."))
-        print("dirpath******************"+dirpath)
-        config.read(os.path.join(dirpath, 'iselenium.ini'))
+        # dirpath = os.path.dirname(os.path.abspath("."))
+        # config.read(os.path.join(dirpath, 'iselenium.ini'))
         return config
 
     def tearDown(self):
