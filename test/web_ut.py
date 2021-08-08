@@ -18,6 +18,7 @@ class ISelenium(unittest.TestCase):
         # config.read(os.path.join(os.environ['HOMEPATH'], 'iselenium.ini'))
         # HOMEPATH 是windows C:\Users\1
         dirpath = os.path.dirname(os.path.abspath("."))
+        print("dirpath******************"+dirpath)
         config.read(os.path.join(dirpath, 'iselenium.ini'))
         return config
 
